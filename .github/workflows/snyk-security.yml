@@ -42,7 +42,7 @@ jobs:
         env:
           SNYK_TOKEN: b5634f52-e50f-46f5-8841-d9239541f265
         with:
-          args: --sarif-file-output=snyk.sarif snyk code test --report --project-name="AlexDevSecOps/Brakeman" 
+          args: --sarif-file-output=snyk.sarif 
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
         with:
