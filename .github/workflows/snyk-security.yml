@@ -60,6 +60,7 @@ jobs:
         # Runs Snyk Open Source (SCA) analysis and uploads result to Snyk.
       - name: Snyk Open Source monitor
         run: 
+          snyk auth b5634f52-e50f-46f5-8841-d9239541f265
           snyk monitor --all-projects
 
 
