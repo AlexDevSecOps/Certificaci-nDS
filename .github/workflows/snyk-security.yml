@@ -50,7 +50,7 @@ jobs:
 
         env:
           # This is where you will need to introduce the Snyk API token created with your Snyk account
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+          SNYK_TOKEN: b5634f52-e50f-46f5-8841-d9239541f265
 
         # Runs Snyk Code (SAST) analysis and uploads result into GitHub.
         # Use || true to not fail the pipeline
@@ -61,7 +61,7 @@ jobs:
       - name: Snyk Open Source monitor
         run: 
           snyk monitor --all-projects
-          snyk auth ${{ secrets.SNYK_TOKEN }}
+
 
         # Runs Snyk Infrastructure as Code (IaC) analysis and uploads result to Snyk.
         # Use || true to not fail the pipeline.
