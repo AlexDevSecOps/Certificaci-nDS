@@ -46,13 +46,13 @@ jobs:
           command: monitor
           #args: --sarif-file-output=snyk.sarif && snyk monitor --all-projects && snyk code test --sarif > snyk-code.sarif || true && snyk iac test --report || true
       - name: Buid Image
-        run: docker build -t AlexDevSecOps/image-to-test .
+        run: docker build -t alexdevsecops/image-to-test .
       - name: Run Snyk to check Docker image for vulnerabilities
         uses: snyk/actions/docker@master
         env:
           SNYK_TOKEN: b5634f52-e50f-46f5-8841-d9239541f265
         with:
-          image: AlexDevSecOps/image-to-test
+          image: alexdevsecops/image-to-test
           command: monitor
           args: --file=Dockerfile
           
