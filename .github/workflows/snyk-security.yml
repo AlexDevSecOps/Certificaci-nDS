@@ -51,6 +51,7 @@ jobs:
           SNYK_TOKEN: b5634f52-e50f-46f5-8841-d9239541f265
         with:
           image: AlexDevSecOps/image-to-test
+          command: monitor
           args: --file=Dockerfile
           
       - name: Set up Snyk CLI to check for security issues
