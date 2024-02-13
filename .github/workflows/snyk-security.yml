@@ -41,7 +41,7 @@ jobs:
         uses: snyk/actions/ruby@master
         continue-on-error: true # To make sure that SARIF upload gets called
         env:
-          SNYK_TOKEN: b5634f52-e50f-46f5-8841-d9239541f265
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           command: monitor
           #args: --sarif-file-output=snyk.sarif && snyk monitor --all-projects && snyk code test --sarif > snyk-code.sarif || true && snyk iac test --report || true
